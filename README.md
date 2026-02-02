@@ -17,12 +17,12 @@ docker run --rm eddypro-engine:0.1.0 eddypro_fcc --help
 
 This image is pinned to `LI-COR-Environmental/eddypro-engine` tag `v7.0.9`.
 
-## Publishing (GHCR)
+## Publishing (ECR)
 
-Push a git tag to publish a matching image tag to GHCR.
+Push a git tag to publish a matching image tag to AWS ECR.
 
 Example:
 
 - create tag: `git tag 0.1.0`
 - push tag: `git push origin 0.1.0`
-- published image: `ghcr.io/nerc-ceh/eddypro-engine:0.1.0`
+- published image: `<account-id>.dkr.ecr.<region>.amazonaws.com/eddypro-engine:0.1.0`
