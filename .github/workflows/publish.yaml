@@ -14,7 +14,7 @@ env:
   ECR_REPOSITORY: eddypro-engine
 
 jobs:
-  build-and-push:
+  build-and-push-staging:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN_STAGING }}
           role-session-name: GitHubActions-EddyPro
           aws-region: ${{ env.AWS_REGION }}
 
